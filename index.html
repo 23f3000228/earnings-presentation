@@ -5,187 +5,236 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Q3 2024 Financial Earnings Report - 23f3000228@ds.study.iitm.ac.in</title>
     
+    <!-- RevealJS CSS -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.3.1/reveal.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.3.1/theme/black.min.css">
+    
+    <!-- Syntax Highlighting CSS -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/styles/monokai.min.css">
     
+    <!-- MathJax for Equations -->
     <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
     <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     
     <style>
-        .email-highlight {
-            color: #ff6b6b;
+        .email-contact {
+            color: #42affa;
             font-weight: bold;
-            font-size: 1.2em;
-            background: rgba(255, 255, 255, 0.1);
+            background: rgba(66, 175, 250, 0.1);
             padding: 10px;
             border-radius: 5px;
             margin: 10px 0;
         }
-        .financial-metric { 
-            background: #2b2b2b; 
-            padding: 15px; 
-            border-radius: 10px; 
-            margin: 10px 0; 
+        .financial-metric {
+            background: #2b2b2b;
+            padding: 15px;
+            border-radius: 10px;
+            margin: 10px 0;
+            border-left: 4px solid #42affa;
         }
-        code {
-            border-radius: 5px;
-            padding: 10px !important;
+        .code-block {
+            font-size: 0.8em;
+            line-height: 1.2;
         }
     </style>
 </head>
 <body>
     <div class="reveal">
         <div class="slides">
-            <!-- Title Slide with fragments -->
+            <!-- Slide 1: Title with fragments -->
             <section>
                 <h1 class="fragment fade-in">Q3 2024 Earnings Report</h1>
                 <h3 class="fragment fade-in">Major Financial Institution</h3>
-                <div class="fragment highlight-red email-highlight">
+                <div class="fragment fade-up email-contact">
                     Technical Consultant: 23f3000228@ds.study.iitm.ac.in
                 </div>
-                <p class="fragment fade-up">Quarterly Financial Performance Review</p>
+                <p class="fragment fade-in">Quarterly Financial Performance Review</p>
+                <aside class="notes">
+                    Welcome to our Q3 2024 earnings presentation. 
+                    I'm your technical consultant for today's review.
+                </aside>
             </section>
 
-            <!-- MARKDOWN SLIDE -->
+            <!-- Slide 2: Markdown Content -->
             <section data-markdown>
                 <textarea data-template>
                     ## 📊 Executive Summary
-                    
-                    ### Key Performance Indicators
-                    - **Total Revenue**: $15.2 Billion ↗️
-                    - **Net Income**: $3.8 Billion ↗️  
-                    - **Earnings Per Share**: $2.45 ↗️
-                    - **Assets Under Management**: $450 Billion ↗️
 
-                    ### Growth Metrics
-                    - **Revenue Growth**: 12% YoY
-                    - **Net Income Growth**: 18% YoY
+                    ### Financial Highlights
+                    - **Revenue**: $15.2B (12% YoY growth)
+                    - **Net Income**: $3.8B (18% YoY growth)
+                    - **EPS**: $2.45 (exceeding expectations)
+                    - **AUM**: $450B (record high)
 
-                    *Report by: 23f3000228@ds.study.iitm.ac.in*
+                    ### Operational Metrics
+                    - Client acquisition: +45K new accounts
+                    - Digital engagement: +35%
+                    - Risk management: Improved VaR metrics
+
+                    *Prepared by: 23f3000228@ds.study.iitm.ac.in*
                 </textarea>
+                <aside class="notes">
+                    This markdown slide summarizes our key performance indicators.
+                    Note the strong double-digit growth across all major metrics.
+                </aside>
             </section>
 
-            <!-- Financial Performance with fragments -->
+            <!-- Slide 3: Financial Performance with Fragments -->
             <section>
                 <h2>Financial Performance</h2>
                 <div class="fragment fade-down">
                     <div class="financial-metric">
-                        <h4>📈 Revenue Growth</h4>
+                        <h4>Revenue Growth</h4>
                         <p>$15.2 Billion | <span class="fragment highlight-green">+12% YoY</span></p>
                     </div>
                 </div>
                 <div class="fragment fade-down">
                     <div class="financial-metric">
-                        <h4>💰 Net Income</h4>
+                        <h4>Net Income</h4>
                         <p>$3.8 Billion | <span class="fragment highlight-green">+18% YoY</span></p>
                     </div>
                 </div>
-                <p class="fragment fade-up email-highlight">Analysis: 23f3000228@ds.study.iitm.ac.in</p>
+                <div class="fragment fade-down">
+                    <div class="financial-metric">
+                        <h4>Operating Margin</h4>
+                        <p>25.3% | <span class="fragment highlight-green">+2.1pp improvement</span></p>
+                    </div>
+                </div>
+                <p class="fragment fade-up email-contact">Analysis by: 23f3000228@ds.study.iitm.ac.in</p>
+                <aside class="notes">
+                    Each metric reveals our strong financial performance this quarter.
+                    The margin expansion is particularly noteworthy.
+                </aside>
             </section>
 
-            <!-- Code Sample with EXPLICIT syntax highlighting -->
+            <!-- Slide 4: Code with Syntax Highlighting -->
             <section>
-                <h2>Python: Risk Management</h2>
-                <pre><code class="python hljs" data-trim>
+                <h2>Risk Analysis Algorithm</h2>
+                <p class="email-contact">Developer: 23f3000228@ds.study.iitm.ac.in</p>
+                <pre class="code-block"><code class="python" data-trim data-line-numbers="|1-3|4-8|10-14|16-18">
 import numpy as np
 import pandas as pd
 
-def calculate_var(returns, confidence_level=0.95):
-    """
-    Calculate Value at Risk using historical simulation
-    """
-    if confidence_level < 0 or confidence_level > 1:
+def calculate_value_at_risk(returns, confidence=0.95):
+    """Calculate Value at Risk using historical simulation"""
+    if confidence <= 0 or confidence >= 1:
         raise ValueError("Confidence level must be between 0 and 1")
     
-    var = np.percentile(returns, (1 - confidence_level) * 100)
+    # Calculate VaR as percentile
+    var = np.percentile(returns, (1 - confidence) * 100)
     return var
 
-# Calculate 95% VaR
-portfolio_returns = np.random.normal(0.001, 0.02, 1000)
-var_95 = calculate_var(portfolio_returns, 0.95)
-print(f"95% Value at Risk: {var_95:.4f}")
+def portfolio_analysis(portfolio_returns):
+    """Comprehensive portfolio risk analysis"""
+    var_95 = calculate_value_at_risk(portfolio_returns, 0.95)
+    var_99 = calculate_value_at_risk(portfolio_returns, 0.99)
+    
+    return {
+        'var_95': var_95,
+        'var_99': var_99,
+        'volatility': np.std(portfolio_returns)
+    }
+
+# Example usage
+returns = np.random.normal(0.001, 0.02, 10000)
+results = portfolio_analysis(returns)
+print(f"95% VaR: {results['var_95']:.4f}")
                 </code></pre>
-                <p class="fragment fade-up email-highlight">Code by: 23f3000228@ds.study.iitm.ac.in</p>
+                <aside class="notes">
+                    This Python code demonstrates our risk management framework.
+                    We use historical simulation for robust VaR calculations.
+                </aside>
             </section>
 
-            <!-- SQL Code with syntax highlighting -->
+            <!-- Slide 5: SQL Code with Highlighting -->
             <section>
-                <h2>SQL: Financial Analytics</h2>
-                <pre><code class="sql hljs" data-trim>
--- Quarterly Revenue Analysis
+                <h2>Data Analytics Query</h2>
+                <pre class="code-block"><code class="sql" data-trim data-line-numbers>
+-- Financial Performance Analysis
 SELECT 
     quarter,
     SUM(revenue) as total_revenue,
     SUM(net_income) as total_income,
-    AVG(assets_under_management) as avg_aum
-FROM financial_data
+    AVG(assets_under_management) as avg_aum,
+    COUNT(DISTINCT client_id) as active_clients
+FROM financial_performance
 WHERE quarter = '2024-Q3'
 GROUP BY quarter
 ORDER BY total_revenue DESC;
 
--- Client Portfolio Summary
+-- Client Segmentation Analysis
 SELECT 
-    client_segment,
-    COUNT(*) as client_count,
-    AVG(portfolio_value) as avg_portfolio
-FROM client_portfolios
+    segment,
+    AVG(portfolio_value) as avg_portfolio,
+    COUNT(*) as client_count
+FROM client_data
 WHERE status = 'active'
-GROUP BY client_segment;
+GROUP BY segment
+HAVING COUNT(*) > 100;
                 </code></pre>
-                <p class="fragment fade-up email-highlight">Analytics: 23f3000228@ds.study.iitm.ac.in</p>
+                <p class="fragment fade-up email-contact">Data Engineer: 23f3000228@ds.study.iitm.ac.in</p>
+                <aside class="notes">
+                    These SQL queries power our financial reporting dashboard,
+                    providing real-time insights into performance metrics.
+                </aside>
             </section>
 
-            <!-- Financial Formulas -->
+            <!-- Slide 6: Mathematical Equations -->
             <section>
                 <h2>Financial Formulas</h2>
-                
                 <div class="fragment fade-in">
                     <h4>Return on Equity (ROE)</h4>
                     \[ ROE = \frac{\text{Net Income}}{\text{Shareholder's Equity}} \]
-                    <p class="fragment">Current: \( \frac{3.8\text{B}}{22.5\text{B}} = 16.9\% \)</p>
+                    <p>Current: \( \frac{3.8\text{B}}{22.5\text{B}} = 16.9\% \)</p>
                 </div>
-
                 <div class="fragment fade-in">
-                    <h4>Net Interest Margin</h4>
-                    \[ \text{NIM} = \frac{\text{Interest Income} - \text{Interest Expense}}{\text{Earning Assets}} \]
+                    <h4>Compound Annual Growth Rate</h4>
+                    \[ CAGR = \left( \frac{EV}{BV} \right)^{\frac{1}{n}} - 1 \]
                 </div>
+                <div class="fragment fade-in">
+                    <h4>Risk-Adjusted Return</h4>
+                    \[ Sharpe = \frac{R_p - R_f}{\sigma_p} \]
+                </div>
+                <p class="fragment fade-up email-contact">Quantitative Analyst: 23f3000228@ds.study.iitm.ac.in</p>
+                <aside class="notes">
+                    These formulas represent our key financial metrics.
+                    The ROE of 16.9% demonstrates strong capital efficiency.
+                </aside>
             </section>
 
-            <!-- Conclusion -->
+            <!-- Slide 7: Conclusion -->
             <section>
                 <h2 class="fragment fade-down">Thank You</h2>
                 <p class="fragment fade-left">Questions & Discussion</p>
-                <div class="fragment highlight-red email-highlight">
+                <div class="fragment fade-up email-contact">
                     Contact: 23f3000228@ds.study.iitm.ac.in
                 </div>
+                <p class="fragment fade-in">Next Review: Q4 2024</p>
+                <aside class="notes">
+                    Thank you for your attention. I'm now open for questions
+                    about any aspect of our Q3 2024 performance.
+                </aside>
             </section>
         </div>
     </div>
 
-    <!-- RevealJS Scripts -->
+    <!-- RevealJS & Highlight.js Scripts -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.3.1/reveal.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.3.1/plugin/markdown/markdown.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.3.1/plugin/highlight/highlight.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.3.1/plugin/notes/notes.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/highlight.min.js"></script>
     
     <script>
-        // Initialize RevealJS with all plugins
+        // Initialize Reveal.js with all plugins
         Reveal.initialize({
             hash: true,
             transition: 'slide',
-            plugins: [ RevealMarkdown, RevealHighlight, RevealNotes ],
-            highlight: {
-                highlightOnLoad: true
-            }
+            plugins: [ RevealMarkdown, RevealHighlight, RevealNotes ]
         });
 
-        // Explicit syntax highlighting initialization
-        document.addEventListener('DOMContentLoaded', (event) => {
-            document.querySelectorAll('pre code').forEach((block) => {
-                hljs.highlightElement(block);
-            });
-        });
+        // Initialize syntax highlighting for all code blocks
+        hljs.highlightAll();
     </script>
 </body>
 </html>
