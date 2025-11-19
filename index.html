@@ -5,59 +5,70 @@
     <title>Financial Earnings Report - 23f3000228@ds.study.iitm.ac.in</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@4.5.0/dist/reveal.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@4.5.0/dist/theme/white.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/styles/monokai.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/monokai.min.css">
 </head>
 <body>
     <div class="reveal">
         <div class="slides">
             <section>
-                <h1>Q3 2024 Earnings Report</h1>
-                <h3>Major Financial Institution</h3>
-                <p><strong>Email: 23f3000228@ds.study.iitm.ac.in</strong></p>
-                <aside class="notes">Welcome to our quarterly earnings presentation.</aside>
+                <h1 class="fragment">Q3 2024 Earnings Report</h1>
+                <h3 class="fragment">Major Financial Institution</h3>
+                <p class="fragment"><strong>23f3000228@ds.study.iitm.ac.in</strong></p>
+                <aside class="notes">Welcome to our earnings presentation.</aside>
             </section>
 
             <section data-markdown>
                 <textarea data-template>
                     ## Executive Summary
 
-                    **Contact:** 23f3000228@ds.study.iitm.ac.in
+                    **Email:** 23f3000228@ds.study.iitm.ac.in
 
-                    - **Revenue**: $15.2B (12% growth)
-                    - **Net Income**: $3.8B (18% growth)
-                    - **EPS**: $2.45
+                    - Revenue: $15.2B
+                    - Net Income: $3.8B
+                    - EPS: $2.45
                 </textarea>
             </section>
 
             <section>
-                <h2>Financial Analysis Code</h2>
-                <pre><code class="python" data-trim data-line-numbers>
-def calculate_profit(revenue, expenses):
-    profit = revenue - expenses
-    margin = (profit / revenue) * 100
-    return margin
+                <h2 class="fragment">Python Code</h2>
+                <pre class="fragment"><code class="language-python">
+def calculate_roi(investment, returns):
+    roi = (returns - investment) / investment
+    return roi * 100
 
-result = calculate_profit(15200000000, 11400000000)
-print(f"Profit Margin: {result:.1f}%")
+result = calculate_roi(1000000, 1200000)
+print(f"ROI: {result}%")
                 </code></pre>
-                <p><strong>Developer: 23f3000228@ds.study.iitm.ac.in</strong></p>
+                <p class="fragment">Analyst: 23f3000228@ds.study.iitm.ac.in</p>
             </section>
 
             <section>
-                <h2>Financial Formulas</h2>
-                <p>\[ ROI = \frac{\text{Net Profit}}{\text{Investment}} \times 100 \]</p>
-                <p>\[ EPS = \frac{\text{Net Income}}{\text{Shares}} \]</p>
-                <p><strong>Analyst: 23f3000228@ds.study.iitm.ac.in</strong></p>
+                <h2 class="fragment">SQL Code</h2>
+                <pre class="fragment"><code class="language-sql">
+SELECT quarter, SUM(revenue) as total
+FROM financial_data
+WHERE year = 2024
+GROUP BY quarter;
+                </code></pre>
+                <p class="fragment">Developer: 23f3000228@ds.study.iitm.ac.in</p>
+            </section>
+
+            <section>
+                <h2 class="fragment">Financial Formulas</h2>
+                <p class="fragment">\[ ROI = \frac{\text{Net Profit}}{\text{Investment}} \times 100 \]</p>
+                <p class="fragment">Contact: 23f3000228@ds.study.iitm.ac.in</p>
             </section>
         </div>
     </div>
 
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/reveal.js@4.5.0/dist/reveal.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/reveal.js@4.5.0/plugin/markdown/markdown.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/reveal.js@4.5.0/plugin/highlight/highlight.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/reveal.js@4.5.0/plugin/notes/notes.js"></script>
 
     <script>
+        hljs.highlightAll();
         Reveal.initialize({
             hash: true,
             plugins: [RevealMarkdown, RevealHighlight, RevealNotes]
