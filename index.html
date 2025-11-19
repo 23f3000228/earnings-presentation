@@ -8,40 +8,68 @@
     <div class="reveal">
       <div class="slides">
         <section>
-          <h1>Q3 Earnings Report</h1>
-          <p>23f3000228@ds.study.iitm.ac.in</p>
+          <h1 class="fragment">Q3 2024 Earnings Report</h1>
+          <h3 class="fragment">Major Financial Institution</h3>
+          <p class="fragment"><strong>Email: 23f3000228@ds.study.iitm.ac.in</strong></p>
+          <aside class="notes">Welcome to our quarterly earnings presentation.</aside>
         </section>
-        
+
         <section data-markdown>
           <textarea data-template>
-            ## Markdown Slide
-            
-            - Item 1
-            - Item 2
+            ## Executive Summary
+
+            **Contact:** 23f3000228@ds.study.iitm.ac.in
+
+            - **Revenue**: $15.2B (12% YoY growth)
+            - **Net Income**: $3.8B (18% YoY growth)
+            - **EPS**: $2.45 (exceeding expectations)
           </textarea>
         </section>
-        
+
         <section>
-          <h2>Code Example</h2>
-          <pre><code class="python">
-def hello():
-    print("Hello World")
+          <h2 class="fragment">Financial Analysis</h2>
+          <pre class="fragment"><code class="python" data-trim data-line-numbers>
+def calculate_roi(investment, returns):
+    roi = (returns - investment) / investment
+    return roi * 100
+
+investment = 1000000
+returns = 1200000
+roi = calculate_roi(investment, returns)
+print(f"ROI: {roi:.1f}%")
           </code></pre>
+          <p class="fragment"><strong>Analyst: 23f3000228@ds.study.iitm.ac.in</strong></p>
         </section>
-        
+
         <section>
-          <h2>Math</h2>
-          <p>\[ E = mc^2 \]</p>
+          <h2 class="fragment">Data Analytics</h2>
+          <pre class="fragment"><code class="sql" data-trim>
+SELECT quarter, SUM(revenue) as total_revenue
+FROM financial_data
+WHERE year = 2024
+GROUP BY quarter;
+          </code></pre>
+          <p class="fragment"><strong>Developer: 23f3000228@ds.study.iitm.ac.in</strong></p>
+        </section>
+
+        <section>
+          <h2 class="fragment">Financial Formulas</h2>
+          <p class="fragment">\[ ROI = \frac{\text{Net Profit}}{\text{Investment}} \times 100 \]</p>
+          <p class="fragment">\[ EPS = \frac{\text{Net Income}}{\text{Shares Outstanding}} \]</p>
+          <p class="fragment"><strong>Contact: 23f3000228@ds.study.iitm.ac.in</strong></p>
         </section>
       </div>
     </div>
-    
+
     <script src="https://cdn.jsdelivr.net/npm/reveal.js@4.5.0/dist/reveal.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/reveal.js@4.5.0/plugin/markdown/markdown.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/reveal.js@4.5.0/plugin/highlight/highlight.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/reveal.js@4.5.0/plugin/notes/notes.js"></script>
+
     <script>
       Reveal.initialize({
-        plugins: [ RevealMarkdown, RevealHighlight ]
+        hash: true,
+        plugins: [ RevealMarkdown, RevealHighlight, RevealNotes ]
       });
     </script>
   </body>
