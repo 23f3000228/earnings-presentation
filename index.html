@@ -20,25 +20,28 @@
 
             **Contact:** 23f3000228@ds.study.iitm.ac.in
 
-            - **Revenue**: $15.2B (12% YoY growth)
-            - **Net Income**: $3.8B (18% YoY growth)
-            - **EPS**: $2.45 (exceeding expectations)
+            - **Revenue**: $15.2B (12% growth)
+            - **Net Income**: $3.8B (18% growth)
+            - **EPS**: $2.45
+
+            *Prepared by: 23f3000228@ds.study.iitm.ac.in*
           </textarea>
+          <aside class="notes">This markdown slide shows our key financial metrics.</aside>
         </section>
 
         <section>
           <h2 class="fragment">Financial Analysis</h2>
           <pre class="fragment"><code class="python" data-trim data-line-numbers>
-def calculate_roi(investment, returns):
-    roi = (returns - investment) / investment
-    return roi * 100
+def calculate_profit(revenue, expenses):
+    profit = revenue - expenses
+    margin = (profit / revenue) * 100
+    return margin
 
-investment = 1000000
-returns = 1200000
-roi = calculate_roi(investment, returns)
-print(f"ROI: {roi:.1f}%")
+result = calculate_profit(15200000000, 11400000000)
+print(f"Profit Margin: {result:.1f}%")
           </code></pre>
-          <p class="fragment"><strong>Analyst: 23f3000228@ds.study.iitm.ac.in</strong></p>
+          <p class="fragment"><strong>Developer: 23f3000228@ds.study.iitm.ac.in</strong></p>
+          <aside class="notes">Python code for profit margin calculation.</aside>
         </section>
 
         <section>
@@ -46,10 +49,11 @@ print(f"ROI: {roi:.1f}%")
           <pre class="fragment"><code class="sql" data-trim>
 SELECT quarter, SUM(revenue) as total_revenue
 FROM financial_data
-WHERE year = 2024
+WHERE year = 2024 AND quarter = 'Q3'
 GROUP BY quarter;
           </code></pre>
-          <p class="fragment"><strong>Developer: 23f3000228@ds.study.iitm.ac.in</strong></p>
+          <p class="fragment"><strong>Analyst: 23f3000228@ds.study.iitm.ac.in</strong></p>
+          <aside class="notes">SQL query for financial data analysis.</aside>
         </section>
 
         <section>
@@ -57,6 +61,14 @@ GROUP BY quarter;
           <p class="fragment">\[ ROI = \frac{\text{Net Profit}}{\text{Investment}} \times 100 \]</p>
           <p class="fragment">\[ EPS = \frac{\text{Net Income}}{\text{Shares Outstanding}} \]</p>
           <p class="fragment"><strong>Contact: 23f3000228@ds.study.iitm.ac.in</strong></p>
+          <aside class="notes">Key financial formulas used in our analysis.</aside>
+        </section>
+
+        <section>
+          <h2 class="fragment">Thank You</h2>
+          <p class="fragment">Questions & Discussion</p>
+          <p class="fragment"><strong>Email: 23f3000228@ds.study.iitm.ac.in</strong></p>
+          <aside class="notes">Thank you for attending. Open for questions.</aside>
         </section>
       </div>
     </div>
