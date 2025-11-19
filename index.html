@@ -21,6 +21,7 @@
                 <h3 class="fragment fade-in">Major Financial Institution</h3>
                 <p class="fragment fade-up"><strong>Email: 23f3000228@ds.study.iitm.ac.in</strong></p>
                 <p class="fragment fade-in">Technical Consultant Presentation</p>
+                <aside class="notes">Welcome to our earnings presentation.</aside>
             </section>
 
             <!-- Slide 2: Markdown content -->
@@ -33,69 +34,85 @@
                     - Revenue: $15.2B ↗️
                     - Net Income: $3.8B ↗️  
                     - EPS: $2.45 ↗️
-                    - AUM: $450B ↗️
                 </textarea>
             </section>
 
-            <!-- Slide 3: Financial data with fragments -->
+            <!-- Slide 3: Python Code with EXPLICIT syntax highlighting -->
             <section>
-                <h2 class="fragment fade-down">Financial Metrics</h2>
-                
-                <p class="fragment fade-left">📈 Revenue Growth: +12% YoY</p>
-                <p class="fragment fade-right">💰 Net Income: +18% YoY</p>
-                <p class="fragment fade-up">📊 Operating Margin: 25.3%</p>
-                <p class="fragment highlight-red">Contact: 23f3000228@ds.study.iitm.ac.in</p>
-            </section>
+                <h2 class="fragment">Python: Financial Analysis</h2>
+                <pre class="fragment"><code class="language-python hljs">
+def calculate_roi(investment, returns):
+    """Calculate Return on Investment"""
+    roi = (returns - investment) / investment
+    return roi * 100
 
-            <!-- Slide 4: Code with syntax highlighting -->
-            <section>
-                <h2 class="fragment">Financial Analysis Code</h2>
-                <pre class="fragment"><code class="python" data-trim data-line-numbers>
-# Calculate financial metrics
-def calculate_profit_margin(revenue, expenses):
-    net_income = revenue - expenses
-    margin = (net_income / revenue) * 100
-    return margin
-
-# Example calculation
-revenue = 15200000000  # $15.2B
-expenses = 11400000000 # Expenses
-margin = calculate_profit_margin(revenue, expenses)
-print(f"Profit Margin: {margin:.1f}%")
+# Calculate ROI for Q3 2024
+investment = 1000000000
+returns = 1120000000
+roi_percentage = calculate_roi(investment, returns)
+print(f"Q3 2024 ROI: {roi_percentage:.1f}%")
                 </code></pre>
                 <p class="fragment"><strong>Developer: 23f3000228@ds.study.iitm.ac.in</strong></p>
+            </section>
+
+            <!-- Slide 4: SQL Code with EXPLICIT syntax highlighting -->
+            <section>
+                <h2 class="fragment">SQL: Data Analysis</h2>
+                <pre class="fragment"><code class="language-sql hljs">
+-- Query quarterly financial data
+SELECT 
+    quarter,
+    SUM(revenue) as total_revenue,
+    SUM(net_income) as total_income,
+    AVG(assets) as average_assets
+FROM financial_data 
+WHERE quarter = '2024-Q3'
+GROUP BY quarter;
+
+-- Calculate growth metrics
+SELECT 
+    (current.revenue - previous.revenue) / previous.revenue as growth_rate
+FROM financial_data current
+JOIN financial_data previous ON current.quarter = previous.quarter + 1;
+                </code></pre>
+                <p class="fragment"><strong>Analyst: 23f3000228@ds.study.iitm.ac.in</strong></p>
             </section>
 
             <!-- Slide 5: Math equations -->
             <section>
                 <h2 class="fragment">Financial Formulas</h2>
-                <p class="fragment">\[ \text{ROE} = \frac{\text{Net Income}}{\text{Equity}} \]</p>
-                <p class="fragment">\[ \text{EPS} = \frac{\text{Net Income}}{\text{Shares}} \]</p>
-                <p class="fragment"><strong>Analyst: 23f3000228@ds.study.iitm.ac.in</strong></p>
+                <p class="fragment">\[ \text{ROE} = \frac{\text{Net Income}}{\text{Shareholder Equity}} \]</p>
+                <p class="fragment">\[ \text{EPS} = \frac{\text{Net Income}}{\text{Outstanding Shares}} \]</p>
+                <p class="fragment">\[ \text{Profit Margin} = \frac{\text{Net Income}}{\text{Revenue}} \times 100 \]</p>
+                <p class="fragment"><strong>Quant: 23f3000228@ds.study.iitm.ac.in</strong></p>
             </section>
 
             <!-- Slide 6: Conclusion -->
             <section>
                 <h2 class="fragment fade-in">Thank You</h2>
-                <p class="fragment fade-in">Questions?</p>
-                <p class="fragment highlight-blue"><strong>23f3000228@ds.study.iitm.ac.in</strong></p>
+                <p class="fragment fade-in">Questions & Discussion</p>
+                <p class="fragment highlight-red"><strong>Contact: 23f3000228@ds.study.iitm.ac.in</strong></p>
             </section>
         </div>
     </div>
 
-    <!-- RevealJS Scripts -->
+    <!-- Load Highlight.js FIRST -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/highlight.min.js"></script>
+    
+    <!-- Then load Reveal.js and plugins -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.3.1/reveal.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.3.1/plugin/markdown/markdown.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.3.1/plugin/highlight/highlight.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.3.1/plugin/notes/notes.min.js"></script>
     
     <script>
-        // Initialize Reveal.js with ALL features
+        // Initialize syntax highlighting FIRST
+        hljs.highlightAll();
+        
+        // Then initialize Reveal.js
         Reveal.initialize({
             hash: true,
             transition: 'slide',
-            backgroundTransition: 'fade',
-            pdfSeparateFragments: false,
             plugins: [ RevealMarkdown, RevealHighlight, RevealNotes ]
         });
     </script>
