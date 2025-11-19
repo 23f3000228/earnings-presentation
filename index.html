@@ -22,25 +22,15 @@
             border-radius: 5px;
             margin: 10px 0;
         }
-        .email-footer {
-            position: fixed;
-            bottom: 10px;
-            right: 10px;
-            font-size: 0.8em;
-            color: #42affa;
-        }
         .financial-metric { 
             background: #2b2b2b; 
             padding: 15px; 
             border-radius: 10px; 
             margin: 10px 0; 
         }
-        .fragment.highlight-red {
-            opacity: 1;
-            visibility: visible;
-        }
-        .fragment.highlight-red.visible {
-            color: #ff6b6b;
+        code {
+            border-radius: 5px;
+            padding: 10px !important;
         }
     </style>
 </head>
@@ -55,10 +45,9 @@
                     Technical Consultant: 23f3000228@ds.study.iitm.ac.in
                 </div>
                 <p class="fragment fade-up">Quarterly Financial Performance Review</p>
-                <aside class="notes">Welcome stakeholders...</aside>
             </section>
 
-            <!-- MARKDOWN SLIDE - This is the required Markdown content -->
+            <!-- MARKDOWN SLIDE -->
             <section data-markdown>
                 <textarea data-template>
                     ## 📊 Executive Summary
@@ -72,18 +61,12 @@
                     ### Growth Metrics
                     - **Revenue Growth**: 12% YoY
                     - **Net Income Growth**: 18% YoY
-                    - **Client Acquisition**: +45,000 new accounts
 
-                    ### Strategic Focus
-                    - Digital transformation initiatives
-                    - AI-powered analytics
-                    - Sustainable investment products
-
-                    *Report prepared by: 23f3000228@ds.study.iitm.ac.in*
+                    *Report by: 23f3000228@ds.study.iitm.ac.in*
                 </textarea>
             </section>
 
-            <!-- Financial Performance with animated fragments -->
+            <!-- Financial Performance with fragments -->
             <section>
                 <h2>Financial Performance</h2>
                 <div class="fragment fade-down">
@@ -98,42 +81,13 @@
                         <p>$3.8 Billion | <span class="fragment highlight-green">+18% YoY</span></p>
                     </div>
                 </div>
-                <div class="fragment fade-down">
-                    <div class="financial-metric">
-                        <h4>📊 Operating Margin</h4>
-                        <p>25.3% | <span class="fragment highlight-green">+2.1pp improvement</span></p>
-                    </div>
-                </div>
-                <p class="fragment fade-up email-highlight">Analysis by: 23f3000228@ds.study.iitm.ac.in</p>
+                <p class="fragment fade-up email-highlight">Analysis: 23f3000228@ds.study.iitm.ac.in</p>
             </section>
 
-            <!-- Financial Formulas with fragments -->
+            <!-- Code Sample with EXPLICIT syntax highlighting -->
             <section>
-                <h2>Key Financial Formulas</h2>
-                
-                <div class="fragment fade-in">
-                    <h4>Return on Equity (ROE)</h4>
-                    \[ ROE = \frac{\text{Net Income}}{\text{Shareholder's Equity}} \]
-                    <p class="fragment">Current: \( \frac{3.8\text{B}}{22.5\text{B}} = 16.9\% \)</p>
-                </div>
-
-                <div class="fragment fade-in">
-                    <h4>Net Interest Margin</h4>
-                    \[ \text{NIM} = \frac{\text{Interest Income} - \text{Interest Expense}}{\text{Earning Assets}} \]
-                    <p class="fragment">Current: \( \frac{9.2\text{B} - 2.1\text{B}}{380\text{B}} = 1.87\% \)</p>
-                </div>
-
-                <div class="fragment fade-in">
-                    <h4>Compound Annual Growth Rate</h4>
-                    \[ \text{CAGR} = \left( \frac{\text{End Value}}{\text{Begin Value}} \right)^{\frac{1}{n}} - 1 \]
-                </div>
-            </section>
-
-            <!-- Code Sample with fragments -->
-            <section>
-                <h2>Risk Management Algorithm</h2>
-                <pre><code class="python" data-trim data-line-numbers="|1-3|5-10|12-15">
-# Value at Risk (VaR) Calculation
+                <h2>Python: Risk Management</h2>
+                <pre><code class="python hljs" data-trim>
 import numpy as np
 import pandas as pd
 
@@ -147,38 +101,91 @@ def calculate_var(returns, confidence_level=0.95):
     var = np.percentile(returns, (1 - confidence_level) * 100)
     return var
 
-# Example usage
+# Calculate 95% VaR
 portfolio_returns = np.random.normal(0.001, 0.02, 1000)
 var_95 = calculate_var(portfolio_returns, 0.95)
-print(f"95% VaR: {var_95:.4f}")
+print(f"95% Value at Risk: {var_95:.4f}")
                 </code></pre>
-                <p class="fragment fade-up email-highlight">Developer: 23f3000228@ds.study.iitm.ac.in</p>
+                <p class="fragment fade-up email-highlight">Code by: 23f3000228@ds.study.iitm.ac.in</p>
             </section>
 
-            <!-- Conclusion with fragments -->
+            <!-- SQL Code with syntax highlighting -->
+            <section>
+                <h2>SQL: Financial Analytics</h2>
+                <pre><code class="sql hljs" data-trim>
+-- Quarterly Revenue Analysis
+SELECT 
+    quarter,
+    SUM(revenue) as total_revenue,
+    SUM(net_income) as total_income,
+    AVG(assets_under_management) as avg_aum
+FROM financial_data
+WHERE quarter = '2024-Q3'
+GROUP BY quarter
+ORDER BY total_revenue DESC;
+
+-- Client Portfolio Summary
+SELECT 
+    client_segment,
+    COUNT(*) as client_count,
+    AVG(portfolio_value) as avg_portfolio
+FROM client_portfolios
+WHERE status = 'active'
+GROUP BY client_segment;
+                </code></pre>
+                <p class="fragment fade-up email-highlight">Analytics: 23f3000228@ds.study.iitm.ac.in</p>
+            </section>
+
+            <!-- Financial Formulas -->
+            <section>
+                <h2>Financial Formulas</h2>
+                
+                <div class="fragment fade-in">
+                    <h4>Return on Equity (ROE)</h4>
+                    \[ ROE = \frac{\text{Net Income}}{\text{Shareholder's Equity}} \]
+                    <p class="fragment">Current: \( \frac{3.8\text{B}}{22.5\text{B}} = 16.9\% \)</p>
+                </div>
+
+                <div class="fragment fade-in">
+                    <h4>Net Interest Margin</h4>
+                    \[ \text{NIM} = \frac{\text{Interest Income} - \text{Interest Expense}}{\text{Earning Assets}} \]
+                </div>
+            </section>
+
+            <!-- Conclusion -->
             <section>
                 <h2 class="fragment fade-down">Thank You</h2>
                 <p class="fragment fade-left">Questions & Discussion</p>
                 <div class="fragment highlight-red email-highlight">
-                    23f3000228@ds.study.iitm.ac.in
+                    Contact: 23f3000228@ds.study.iitm.ac.in
                 </div>
-                <p class="fragment fade-up">Next Quarterly Review: Q4 2024</p>
             </section>
         </div>
     </div>
 
+    <!-- RevealJS Scripts -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.3.1/reveal.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.3.1/plugin/markdown/markdown.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.3.1/plugin/highlight/highlight.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.3.1/plugin/notes/notes.min.js"></script>
     
     <script>
+        // Initialize RevealJS with all plugins
         Reveal.initialize({
             hash: true,
             transition: 'slide',
-            plugins: [ RevealMarkdown, RevealHighlight, RevealNotes ]
+            plugins: [ RevealMarkdown, RevealHighlight, RevealNotes ],
+            highlight: {
+                highlightOnLoad: true
+            }
         });
-        hljs.highlightAll();
+
+        // Explicit syntax highlighting initialization
+        document.addEventListener('DOMContentLoaded', (event) => {
+            document.querySelectorAll('pre code').forEach((block) => {
+                hljs.highlightElement(block);
+            });
+        });
     </script>
 </body>
 </html>
