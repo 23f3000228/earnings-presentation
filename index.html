@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Q3 2024 Financial Earnings Report</title>
+    <title>Q3 2024 Financial Earnings Report - 23f3000228@ds.study.iitm.ac.in</title>
     
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.3.1/reveal.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.3.1/theme/black.min.css">
@@ -13,43 +13,147 @@
     <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     
     <style>
-        .email-contact { color: #42affa; font-weight: bold; }
-        .financial-metric { background: #2b2b2b; padding: 15px; border-radius: 10px; margin: 10px 0; }
+        .email-highlight {
+            color: #ff6b6b;
+            font-weight: bold;
+            font-size: 1.2em;
+            background: rgba(255, 255, 255, 0.1);
+            padding: 10px;
+            border-radius: 5px;
+            margin: 10px 0;
+        }
+        .email-footer {
+            position: fixed;
+            bottom: 10px;
+            right: 10px;
+            font-size: 0.8em;
+            color: #42affa;
+        }
+        .financial-metric { 
+            background: #2b2b2b; 
+            padding: 15px; 
+            border-radius: 10px; 
+            margin: 10px 0; 
+        }
+        .fragment.highlight-red {
+            opacity: 1;
+            visibility: visible;
+        }
+        .fragment.highlight-red.visible {
+            color: #ff6b6b;
+        }
     </style>
 </head>
 <body>
     <div class="reveal">
         <div class="slides">
+            <!-- Title Slide with fragments -->
             <section>
-                <h1>Q3 2024 Earnings Report</h1>
-                <h3>Major Financial Institution</h3>
-                <p class="email-contact">Technical Consultant: 23f3000228@ds.study.iitm.ac.in</p>
+                <h1 class="fragment fade-in">Q3 2024 Earnings Report</h1>
+                <h3 class="fragment fade-in">Major Financial Institution</h3>
+                <div class="fragment highlight-red email-highlight">
+                    Technical Consultant: 23f3000228@ds.study.iitm.ac.in
+                </div>
+                <p class="fragment fade-up">Quarterly Financial Performance Review</p>
                 <aside class="notes">Welcome stakeholders...</aside>
             </section>
 
-            <section data-markdown>
-                <textarea data-template>
-                    ## Executive Summary
-                    **Contact:** 23f3000228@ds.study.iitm.ac.in
-                    - **Revenue**: $15.2B (12% YoY growth)
-                    - **Net Income**: $3.8B (18% YoY growth)
-                </textarea>
+            <!-- Executive Summary with fragments -->
+            <section>
+                <h2>Executive Summary</h2>
+                <div class="fragment highlight-blue email-highlight">
+                    Contact: 23f3000228@ds.study.iitm.ac.in
+                </div>
+                <ul>
+                    <li class="fragment fade-left"><strong>Revenue:</strong> $15.2B <span class="fragment highlight-green">(12% YoY growth)</span></li>
+                    <li class="fragment fade-left"><strong>Net Income:</strong> $3.8B <span class="fragment highlight-green">(18% YoY growth)</span></li>
+                    <li class="fragment fade-left"><strong>EPS:</strong> $2.45 <span class="fragment highlight-green">(exceeding expectations)</span></li>
+                </ul>
+                <div class="fragment fade-up financial-metric">
+                    <strong>Assets Under Management:</strong> $450B ↗️
+                </div>
             </section>
 
+            <!-- Financial Performance with animated fragments -->
             <section>
-                <h2>Code Example</h2>
-                <pre><code class="python">
+                <h2>Financial Performance</h2>
+                <div class="fragment fade-down">
+                    <div class="financial-metric">
+                        <h4>📈 Revenue Growth</h4>
+                        <p>$15.2 Billion | <span class="fragment highlight-green">+12% YoY</span></p>
+                    </div>
+                </div>
+                <div class="fragment fade-down">
+                    <div class="financial-metric">
+                        <h4>💰 Net Income</h4>
+                        <p>$3.8 Billion | <span class="fragment highlight-green">+18% YoY</span></p>
+                    </div>
+                </div>
+                <div class="fragment fade-down">
+                    <div class="financial-metric">
+                        <h4>📊 Operating Margin</h4>
+                        <p>25.3% | <span class="fragment highlight-green">+2.1pp improvement</span></p>
+                    </div>
+                </div>
+                <p class="fragment fade-up email-highlight">Analysis by: 23f3000228@ds.study.iitm.ac.in</p>
+            </section>
+
+            <!-- Financial Formulas with fragments -->
+            <section>
+                <h2>Key Financial Formulas</h2>
+                
+                <div class="fragment fade-in">
+                    <h4>Return on Equity (ROE)</h4>
+                    \[ ROE = \frac{\text{Net Income}}{\text{Shareholder's Equity}} \]
+                    <p class="fragment">Current: \( \frac{3.8\text{B}}{22.5\text{B}} = 16.9\% \)</p>
+                </div>
+
+                <div class="fragment fade-in">
+                    <h4>Net Interest Margin</h4>
+                    \[ \text{NIM} = \frac{\text{Interest Income} - \text{Interest Expense}}{\text{Earning Assets}} \]
+                    <p class="fragment">Current: \( \frac{9.2\text{B} - 2.1\text{B}}{380\text{B}} = 1.87\% \)</p>
+                </div>
+
+                <div class="fragment fade-in">
+                    <h4>Compound Annual Growth Rate</h4>
+                    \[ \text{CAGR} = \left( \frac{\text{End Value}}{\text{Begin Value}} \right)^{\frac{1}{n}} - 1 \]
+                </div>
+            </section>
+
+            <!-- Code Sample with fragments -->
+            <section>
+                <h2>Risk Management Algorithm</h2>
+                <pre><code class="python" data-trim data-line-numbers="|1-3|5-10|12-15">
+# Value at Risk (VaR) Calculation
+import numpy as np
+import pandas as pd
+
 def calculate_var(returns, confidence_level=0.95):
-    """Calculate Value at Risk"""
+    """
+    Calculate Value at Risk using historical simulation
+    """
+    if confidence_level < 0 or confidence_level > 1:
+        raise ValueError("Confidence level must be between 0 and 1")
+    
     var = np.percentile(returns, (1 - confidence_level) * 100)
     return var
+
+# Example usage
+portfolio_returns = np.random.normal(0.001, 0.02, 1000)
+var_95 = calculate_var(portfolio_returns, 0.95)
+print(f"95% VaR: {var_95:.4f}")
                 </code></pre>
+                <p class="fragment fade-up email-highlight">Developer: 23f3000228@ds.study.iitm.ac.in</p>
             </section>
 
+            <!-- Conclusion with fragments -->
             <section>
-                <h2>Financial Formulas</h2>
-                \[ ROE = \frac{\text{Net Income}}{\text{Shareholder's Equity}} \]
-                <p>Email: 23f3000228@ds.study.iitm.ac.in</p>
+                <h2 class="fragment fade-down">Thank You</h2>
+                <p class="fragment fade-left">Questions & Discussion</p>
+                <div class="fragment highlight-red email-highlight">
+                    23f3000228@ds.study.iitm.ac.in
+                </div>
+                <p class="fragment fade-up">Next Quarterly Review: Q4 2024</p>
             </section>
         </div>
     </div>
@@ -62,6 +166,7 @@ def calculate_var(returns, confidence_level=0.95):
     <script>
         Reveal.initialize({
             hash: true,
+            transition: 'slide',
             plugins: [ RevealMarkdown, RevealHighlight, RevealNotes ]
         });
         hljs.highlightAll();
