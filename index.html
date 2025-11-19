@@ -5,14 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Q3 2024 Financial Earnings Report - 23f3000228@ds.study.iitm.ac.in</title>
     
-    <!-- RevealJS CSS -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.3.1/reveal.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.3.1/theme/black.min.css">
-    
-    <!-- Syntax Highlighting CSS -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/styles/monokai.min.css">
     
-    <!-- MathJax for Equations -->
     <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
     <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     
@@ -32,16 +28,12 @@
             margin: 10px 0;
             border-left: 4px solid #42affa;
         }
-        .code-block {
-            font-size: 0.8em;
-            line-height: 1.2;
-        }
     </style>
 </head>
 <body>
     <div class="reveal">
         <div class="slides">
-            <!-- Slide 1: Title with fragments -->
+            <!-- Slide 1: Title with MULTIPLE fragments -->
             <section>
                 <h1 class="fragment fade-in">Q3 2024 Earnings Report</h1>
                 <h3 class="fragment fade-in">Major Financial Institution</h3>
@@ -51,7 +43,6 @@
                 <p class="fragment fade-in">Quarterly Financial Performance Review</p>
                 <aside class="notes">
                     Welcome to our Q3 2024 earnings presentation. 
-                    I'm your technical consultant for today's review.
                 </aside>
             </section>
 
@@ -64,161 +55,88 @@
                     - **Revenue**: $15.2B (12% YoY growth)
                     - **Net Income**: $3.8B (18% YoY growth)
                     - **EPS**: $2.45 (exceeding expectations)
-                    - **AUM**: $450B (record high)
-
-                    ### Operational Metrics
-                    - Client acquisition: +45K new accounts
-                    - Digital engagement: +35%
-                    - Risk management: Improved VaR metrics
 
                     *Prepared by: 23f3000228@ds.study.iitm.ac.in*
                 </textarea>
-                <aside class="notes">
-                    This markdown slide summarizes our key performance indicators.
-                    Note the strong double-digit growth across all major metrics.
-                </aside>
             </section>
 
-            <!-- Slide 3: Financial Performance with Fragments -->
+            <!-- Slide 3: Financial Performance with ENHANCED fragments -->
             <section>
-                <h2>Financial Performance</h2>
-                <div class="fragment fade-down">
+                <h2 class="fragment fade-down">Financial Performance</h2>
+                <div class="fragment highlight-red">
                     <div class="financial-metric">
-                        <h4>Revenue Growth</h4>
-                        <p>$15.2 Billion | <span class="fragment highlight-green">+12% YoY</span></p>
+                        <h4>📈 Revenue Growth</h4>
+                        <p>$15.2 Billion | +12% YoY</p>
                     </div>
                 </div>
-                <div class="fragment fade-down">
+                <div class="fragment highlight-blue">
                     <div class="financial-metric">
-                        <h4>Net Income</h4>
-                        <p>$3.8 Billion | <span class="fragment highlight-green">+18% YoY</span></p>
+                        <h4>💰 Net Income</h4>
+                        <p>$3.8 Billion | +18% YoY</p>
                     </div>
                 </div>
-                <div class="fragment fade-down">
+                <div class="fragment highlight-green">
                     <div class="financial-metric">
-                        <h4>Operating Margin</h4>
-                        <p>25.3% | <span class="fragment highlight-green">+2.1pp improvement</span></p>
+                        <h4>📊 Operating Margin</h4>
+                        <p>25.3% | +2.1pp improvement</p>
                     </div>
                 </div>
                 <p class="fragment fade-up email-contact">Analysis by: 23f3000228@ds.study.iitm.ac.in</p>
-                <aside class="notes">
-                    Each metric reveals our strong financial performance this quarter.
-                    The margin expansion is particularly noteworthy.
-                </aside>
             </section>
 
-            <!-- Slide 4: Code with Syntax Highlighting -->
+            <!-- Slide 4: Code with fragments AND syntax highlighting -->
             <section>
-                <h2>Risk Analysis Algorithm</h2>
-                <p class="email-contact">Developer: 23f3000228@ds.study.iitm.ac.in</p>
-                <pre class="code-block"><code class="python" data-trim data-line-numbers="|1-3|4-8|10-14|16-18">
+                <h2 class="fragment fade-in">Risk Analysis Algorithm</h2>
+                <p class="fragment fade-in email-contact">Developer: 23f3000228@ds.study.iitm.ac.in</p>
+                <pre class="fragment fade-in"><code class="python" data-trim data-line-numbers="1-3|4-8|10-14">
 import numpy as np
-import pandas as pd
 
-def calculate_value_at_risk(returns, confidence=0.95):
-    """Calculate Value at Risk using historical simulation"""
+def calculate_var(returns, confidence=0.95):
+    """Calculate Value at Risk"""
     if confidence <= 0 or confidence >= 1:
-        raise ValueError("Confidence level must be between 0 and 1")
+        raise ValueError("Invalid confidence level")
     
-    # Calculate VaR as percentile
     var = np.percentile(returns, (1 - confidence) * 100)
     return var
 
-def portfolio_analysis(portfolio_returns):
-    """Comprehensive portfolio risk analysis"""
-    var_95 = calculate_value_at_risk(portfolio_returns, 0.95)
-    var_99 = calculate_value_at_risk(portfolio_returns, 0.99)
-    
-    return {
-        'var_95': var_95,
-        'var_99': var_99,
-        'volatility': np.std(portfolio_returns)
-    }
-
 # Example usage
-returns = np.random.normal(0.001, 0.02, 10000)
-results = portfolio_analysis(returns)
-print(f"95% VaR: {results['var_95']:.4f}")
+portfolio_returns = np.random.normal(0.001, 0.02, 1000)
+var_95 = calculate_var(portfolio_returns, 0.95)
+print(f"95% VaR: {var_95:.4f}")
                 </code></pre>
-                <aside class="notes">
-                    This Python code demonstrates our risk management framework.
-                    We use historical simulation for robust VaR calculations.
-                </aside>
             </section>
 
-            <!-- Slide 5: SQL Code with Highlighting -->
+            <!-- Slide 5: Mathematical Equations with fragments -->
             <section>
-                <h2>Data Analytics Query</h2>
-                <pre class="code-block"><code class="sql" data-trim data-line-numbers>
--- Financial Performance Analysis
-SELECT 
-    quarter,
-    SUM(revenue) as total_revenue,
-    SUM(net_income) as total_income,
-    AVG(assets_under_management) as avg_aum,
-    COUNT(DISTINCT client_id) as active_clients
-FROM financial_performance
-WHERE quarter = '2024-Q3'
-GROUP BY quarter
-ORDER BY total_revenue DESC;
-
--- Client Segmentation Analysis
-SELECT 
-    segment,
-    AVG(portfolio_value) as avg_portfolio,
-    COUNT(*) as client_count
-FROM client_data
-WHERE status = 'active'
-GROUP BY segment
-HAVING COUNT(*) > 100;
-                </code></pre>
-                <p class="fragment fade-up email-contact">Data Engineer: 23f3000228@ds.study.iitm.ac.in</p>
-                <aside class="notes">
-                    These SQL queries power our financial reporting dashboard,
-                    providing real-time insights into performance metrics.
-                </aside>
-            </section>
-
-            <!-- Slide 6: Mathematical Equations -->
-            <section>
-                <h2>Financial Formulas</h2>
-                <div class="fragment fade-in">
+                <h2 class="fragment fade-down">Financial Formulas</h2>
+                <div class="fragment fade-in-then-out">
                     <h4>Return on Equity (ROE)</h4>
                     \[ ROE = \frac{\text{Net Income}}{\text{Shareholder's Equity}} \]
-                    <p>Current: \( \frac{3.8\text{B}}{22.5\text{B}} = 16.9\% \)</p>
+                </div>
+                <div class="fragment fade-in-then-out">
+                    <h4>Net Interest Margin</h4>
+                    \[ NIM = \frac{\text{Interest Income} - \text{Interest Expense}}{\text{Earning Assets}} \]
                 </div>
                 <div class="fragment fade-in">
-                    <h4>Compound Annual Growth Rate</h4>
-                    \[ CAGR = \left( \frac{EV}{BV} \right)^{\frac{1}{n}} - 1 \]
-                </div>
-                <div class="fragment fade-in">
-                    <h4>Risk-Adjusted Return</h4>
+                    <h4>Sharpe Ratio</h4>
                     \[ Sharpe = \frac{R_p - R_f}{\sigma_p} \]
                 </div>
-                <p class="fragment fade-up email-contact">Quantitative Analyst: 23f3000228@ds.study.iitm.ac.in</p>
-                <aside class="notes">
-                    These formulas represent our key financial metrics.
-                    The ROE of 16.9% demonstrates strong capital efficiency.
-                </aside>
+                <p class="fragment fade-up email-contact">Quant Analyst: 23f3000228@ds.study.iitm.ac.in</p>
             </section>
 
-            <!-- Slide 7: Conclusion -->
+            <!-- Slide 6: Conclusion with fragments -->
             <section>
                 <h2 class="fragment fade-down">Thank You</h2>
                 <p class="fragment fade-left">Questions & Discussion</p>
-                <div class="fragment fade-up email-contact">
+                <div class="fragment highlight-red email-contact">
                     Contact: 23f3000228@ds.study.iitm.ac.in
                 </div>
-                <p class="fragment fade-in">Next Review: Q4 2024</p>
-                <aside class="notes">
-                    Thank you for your attention. I'm now open for questions
-                    about any aspect of our Q3 2024 performance.
-                </aside>
+                <p class="fragment fade-up">Next Quarterly Review: Q4 2024</p>
             </section>
         </div>
     </div>
 
-    <!-- RevealJS & Highlight.js Scripts -->
+    <!-- Scripts -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.3.1/reveal.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.3.1/plugin/markdown/markdown.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.3.1/plugin/highlight/highlight.min.js"></script>
@@ -226,14 +144,11 @@ HAVING COUNT(*) > 100;
     <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/highlight.min.js"></script>
     
     <script>
-        // Initialize Reveal.js with all plugins
         Reveal.initialize({
             hash: true,
             transition: 'slide',
             plugins: [ RevealMarkdown, RevealHighlight, RevealNotes ]
         });
-
-        // Initialize syntax highlighting for all code blocks
         hljs.highlightAll();
     </script>
 </body>
