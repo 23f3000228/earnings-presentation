@@ -11,6 +11,7 @@
     
     <!-- Code highlighting -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/atom-one-dark.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
     
     <!-- Custom styling -->
     <style>
@@ -44,6 +45,8 @@
             font-size: 0.8em;
             max-height: 400px;
             overflow-y: auto;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
         }
         
         .reveal table {
@@ -67,6 +70,13 @@
             padding: 15px;
             border-radius: 5px;
             margin: 15px 0;
+        }
+        
+        /* Ensure code blocks are properly styled */
+        .hljs {
+            background: #282c34 !important;
+            padding: 20px !important;
+            border-radius: 8px;
         }
     </style>
 </head>
@@ -147,12 +157,11 @@
                 </aside>
             </section>
 
-            <!-- Slide 4: Code Sample with Syntax Highlighting -->
+            <!-- Slide 4: Code Sample with PROPER Syntax Highlighting -->
             <section>
                 <h2>Financial Analysis Code</h2>
                 <p>Python implementation for earnings analysis:</p>
-                <pre class="code-sample"><code class="python" data-line-numbers="1-3|5-10|12-20|22-25">
-import pandas as pd
+                <pre class="code-sample"><code class="language-python" data-line-numbers="1-3|5-10|12-20|22-25">import pandas as pd
 import numpy as np
 import matplotlib.pyplot as plt
 
@@ -183,8 +192,7 @@ class EarningsAnalyzer:
         - Gross Margin: {margins['gross_margin']:.1%}
         - Operating Margin: {margins['operating_margin']:.1%}
         - Net Margin: {margins['net_margin']:.1%}
-        """
-                </code></pre>
+        """</code></pre>
                 <aside class="notes">
                     This code demonstrates our automated earnings analysis system. The class structure 
                     allows for consistent financial reporting across all business units.
@@ -260,12 +268,11 @@ class EarningsAnalyzer:
                 </aside>
             </section>
 
-            <!-- Slide 7: Risk Analysis Code -->
+            <!-- Slide 7: Risk Analysis Code with PROPER Syntax Highlighting -->
             <section>
                 <h2>Risk Management Analysis</h2>
                 <p>JavaScript implementation for portfolio risk assessment:</p>
-                <pre class="code-sample"><code class="javascript" data-line-numbers="1-5|7-15|17-25|27-30">
-// Portfolio Risk Analysis Class
+                <pre class="code-sample"><code class="language-javascript" data-line-numbers="1-5|7-15|17-25|27-30">// Portfolio Risk Analysis Class
 class PortfolioRiskAnalyzer {
     constructor(portfolioData, marketData) {
         this.portfolio = portfolioData;
@@ -309,8 +316,7 @@ class PortfolioRiskAnalyzer {
             sharpeRatio: this.calculateSharpeRatio()
         };
     }
-}
-                </code></pre>
+}</code></pre>
                 <aside class="notes">
                     Our risk management system uses sophisticated algorithms to monitor portfolio risk 
                     in real-time. The Value at Risk calculation is particularly important for regulatory compliance.
@@ -371,10 +377,9 @@ class PortfolioRiskAnalyzer {
     <script src="https://cdn.jsdelivr.net/npm/reveal.js@4.5.0/plugin/markdown/markdown.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/reveal.js@4.5.0/plugin/highlight/highlight.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/reveal.js@4.5.0/plugin/math/math.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
     
     <script>
-        // Initialize RevealJS
+        // Initialize RevealJS with proper syntax highlighting
         Reveal.initialize({
             hash: true,
             plugins: [RevealMarkdown, RevealHighlight, RevealMath.KaTeX],
@@ -383,8 +388,10 @@ class PortfolioRiskAnalyzer {
             pdfSeparateFragments: false
         });
 
-        // Initialize syntax highlighting
-        hljs.highlightAll();
+        // Force syntax highlighting initialization
+        Reveal.addEventListener('ready', function() {
+            hljs.highlightAll();
+        });
     </script>
 </body>
 </html>
