@@ -4,156 +4,142 @@
     <meta charset="utf-8">
     <title>Q4 2024 Earnings Report</title>
     
-    <!-- RevealJS CSS -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@4.5.0/dist/reveal.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@4.5.0/dist/theme/white.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.5.0/reset.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.5.0/reveal.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.5.0/theme/white.min.css">
     
-    <!-- Theme for syntax highlighting -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@4.5.0/plugin/highlight/monokai.css">
+    <!-- Theme used for syntax highlighted code -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.5.0/plugin/highlight/monokai.min.css">
 </head>
 <body>
     <div class="reveal">
         <div class="slides">
-            <!-- Slide 1: Title -->
             <section>
                 <h1>Q4 2024 Earnings Report</h1>
                 <h3>Financial Performance Analysis</h3>
                 <p><strong>Analyst:</strong> 23f3000228@ds.study.iitm.ac.in</p>
-                <p><strong>Date:</strong> December 2024</p>
                 <aside class="notes">
-                    Welcome to our Q4 2024 earnings presentation.
+                    Welcome to our earnings presentation.
                 </aside>
             </section>
 
-            <!-- Slide 2: Markdown Slide -->
             <section data-markdown>
                 <textarea data-template>
                     ## Executive Summary
                     
                     **Analyst:** 23f3000228@ds.study.iitm.ac.in
 
-                    ### Key Performance Metrics
-                    - **Revenue**: $12.8B (+15.2% YoY)
-                    - **Net Income**: $2.3B (+27.8% YoY)
-                    - **EPS**: $4.32 per share
-                    - **AUM**: $2.3T
-
-                    ### Business Highlights
-                    - Digital transformation completed
-                    - Market share expansion
-                    - Strong client acquisition
+                    ### Key Metrics
+                    - Revenue: $12.8B
+                    - Net Income: $2.3B
+                    - EPS: $4.32
                 </textarea>
                 <aside class="notes">
-                    This slide shows our key performance metrics using Markdown.
+                    Markdown slide with key metrics.
                 </aside>
             </section>
 
-            <!-- Slide 3: Fragments -->
             <section>
                 <h2>Financial Performance</h2>
-                <p class="fragment">Quarterly Revenue: <strong>$12.8B</strong></p>
-                <p class="fragment">Operating Income: <strong>$2.9B</strong></p>
-                <p class="fragment">Net Income: <strong>$2.3B</strong></p>
-                <p class="fragment fade-up">EPS: <strong>$4.32</strong></p>
+                <p class="fragment">Revenue: $12.8B</p>
+                <p class="fragment">Income: $2.3B</p>
+                <p class="fragment">EPS: $4.32</p>
                 <aside class="notes">
-                    Each metric appears sequentially using fragments.
+                    Fragment animations.
                 </aside>
             </section>
 
-            <!-- Slide 4: Code with Syntax Highlighting (EXACTLY as in docs) -->
             <section>
-                <h2>Financial Analysis Code</h2>
-                <pre><code class="python" data-line-numbers="1-2|4-7|9-12">
-import pandas as pd
-import numpy as np
-
-# Calculate financial metrics
+                <h2>Python Code Example</h2>
+                <pre><code data-trim data-noescape class="python">
 def calculate_earnings(revenue, expenses):
+    # Calculate net income
     net_income = revenue - expenses
+    
+    # Calculate profit margin
     profit_margin = net_income / revenue
+    
     return net_income, profit_margin
 
-# Generate report
+# Usage
 revenue = 12800000000
 expenses = 10500000000
 net_income, margin = calculate_earnings(revenue, expenses)
+print(f"Net Income: ${net_income:,.2f}")
+print(f"Profit Margin: {margin:.1%}")
                 </code></pre>
                 <aside class="notes">
-                    This Python code demonstrates financial calculations with syntax highlighting.
+                    Python code with syntax highlighting.
                 </aside>
             </section>
 
-            <!-- Slide 5: More Code -->
             <section>
-                <h2>Risk Analysis Code</h2>
-                <pre><code class="javascript">
-// Portfolio risk calculation
-class RiskAnalyzer {
-    constructor(portfolio) {
-        this.portfolio = portfolio;
+                <h2>JavaScript Code Example</h2>
+                <pre><code data-trim data-noescape class="javascript">
+class FinancialAnalyzer {
+    constructor(data) {
+        this.data = data;
     }
-    
-    calculateVaR(confidenceLevel) {
-        // Value at Risk calculation
-        const returns = this.getHistoricalReturns();
-        const sortedReturns = returns.sort((a, b) => a - b);
-        const varIndex = Math.floor((1 - confidenceLevel) * returns.length);
-        return sortedReturns[varIndex];
+
+    calculateMetrics() {
+        const revenue = this.data.revenue;
+        const expenses = this.data.expenses;
+        const netIncome = revenue - expenses;
+        const profitMargin = netIncome / revenue;
+
+        return {
+            netIncome: netIncome,
+            profitMargin: profitMargin,
+            roi: this.calculateROI()
+        };
     }
-    
-    getHistoricalReturns() {
-        return [-0.02, 0.015, -0.01, 0.025, 0.008];
+
+    calculateROI() {
+        return (this.data.netIncome / this.data.investment) * 100;
     }
 }
                 </code></pre>
                 <aside class="notes">
-                    JavaScript code for risk analysis with proper syntax highlighting.
+                    JavaScript code with syntax highlighting.
                 </aside>
             </section>
 
-            <!-- Slide 6: Mathematical Equations -->
             <section>
                 <h2>Financial Formulas</h2>
-                <p>Compound Annual Growth Rate (CAGR):</p>
-                \[CAGR = \left(\frac{EV}{BV}\right)^{\frac{1}{n}} - 1\]
+                <p>Compound Annual Growth Rate:</p>
+                \[ CAGR = \left(\frac{EV}{BV}\right)^{\frac{1}{n}} - 1 \]
                 
-                <p>Net Present Value (NPV):</p>
-                \[NPV = \sum_{t=1}^{n} \frac{CF_t}{(1 + r)^t} - C_0\]
+                <p>Net Present Value:</p>
+                \[ NPV = \sum_{t=1}^{n} \frac{CF_t}{(1 + r)^t} - C_0 \]
                 
                 <p>Sharpe Ratio:</p>
-                \[Sharpe = \frac{R_p - R_f}{\sigma_p}\]
+                \[ Sharpe = \frac{R_p - R_f}{\sigma_p} \]
                 <aside class="notes">
-                    Mathematical equations for financial analysis using LaTeX.
+                    Mathematical equations using LaTeX.
                 </aside>
             </section>
 
-            <!-- Slide 7: Conclusion -->
             <section>
                 <h2>Conclusion</h2>
-                <p class="fragment">Strong Q4 performance</p>
+                <p class="fragment">Strong performance in Q4 2024</p>
                 <p class="fragment">Positive outlook for 2025</p>
-                <p class="fragment">Continued growth expected</p>
-                <div class="fragment">
-                    <p><strong>Contact:</strong> 23f3000228@ds.study.iitm.ac.in</p>
-                </div>
+                <p class="fragment">Contact: 23f3000228@ds.study.iitm.ac.in</p>
                 <aside class="notes">
-                    Conclusion slide with fragment animations and contact information.
+                    Conclusion with fragments and contact info.
                 </aside>
             </section>
         </div>
     </div>
 
-    <!-- Scripts -->
-    <script src="https://cdn.jsdelivr.net/npm/reveal.js@4.5.0/dist/reveal.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/reveal.js@4.5.0/plugin/markdown/markdown.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/reveal.js@4.5.0/plugin/highlight/highlight.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/reveal.js@4.5.0/plugin/math/math.js"></script>
-    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.5.0/reveal.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.5.0/plugin/markdown/markdown.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.5.0/plugin/highlight/highlight.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.5.0/plugin/math/math.min.js"></script>
+
     <script>
-        // Initialize Reveal.js exactly as shown in documentation
         Reveal.initialize({
             hash: true,
-            plugins: [ RevealMarkdown, RevealHighlight, RevealMath.KaTeX ]
+            plugins: [RevealMarkdown, RevealHighlight, RevealMath.KaTeX]
         });
     </script>
 </body>
