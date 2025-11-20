@@ -41,6 +41,16 @@
             font-weight: bold;
         }
         
+        .reveal .email-highlight {
+            color: var(--primary-color);
+            font-weight: bold;
+            font-size: 1.2em;
+            background: #f0f8ff;
+            padding: 10px;
+            border-radius: 5px;
+            border-left: 4px solid var(--primary-color);
+        }
+        
         .reveal .code-sample {
             font-size: 0.8em;
             max-height: 400px;
@@ -78,17 +88,33 @@
             padding: 20px !important;
             border-radius: 8px;
         }
+        
+        .footer-email {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            font-size: 0.8em;
+            color: var(--primary-color);
+            background: rgba(255,255,255,0.9);
+            padding: 5px 10px;
+            border-radius: 3px;
+        }
     </style>
 </head>
 <body>
+    <div class="footer-email">Analyst: 23f3000228@ds.study.iitm.ac.in</div>
+    
     <div class="reveal">
         <div class="slides">
-            <!-- Slide 1: Title -->
+            <!-- Slide 1: Title with PROMINENT EMAIL -->
             <section>
                 <h1>Q4 2024 Earnings Report</h1>
                 <h3>Financial Performance Analysis</h3>
-                <p><strong>Prepared by:</strong> 23f3000228@ds.study.iitm.ac.in</p>
+                <div class="email-highlight">
+                    <strong>Prepared by:</strong> 23f3000228@ds.study.iitm.ac.in
+                </div>
                 <p><strong>Date:</strong> December 2024</p>
+                <p><strong>Financial Institution Quarterly Review</strong></p>
                 <aside class="notes">
                     Welcome to our Q4 2024 earnings presentation. Today we'll cover our financial performance, 
                     key metrics, and strategic outlook for the coming year.
@@ -111,6 +137,8 @@
                     - Successful integration of FinTech acquisition
                     - Digital transformation completion
                     - Market share expansion in APAC region
+
+                    **Analyst Contact:** 23f3000228@ds.study.iitm.ac.in
 
                     > "Strong quarter demonstrating resilience and strategic execution"
                 </textarea>
@@ -340,6 +368,8 @@ class PortfolioRiskAnalyzer {
                     - Sustainable finance products
                     - Digital asset custody services
 
+                    **Analyst Contact:** 23f3000228@ds.study.iitm.ac.in
+
                     ### Risk Factors
                     - Interest rate volatility
                     - Regulatory changes
@@ -351,7 +381,7 @@ class PortfolioRiskAnalyzer {
                 </aside>
             </section>
 
-            <!-- Slide 9: Conclusion -->
+            <!-- Slide 9: Conclusion with EMAIL PROMINENTLY DISPLAYED -->
             <section>
                 <h2>Conclusion & Next Steps</h2>
                 <p class="fragment">Strong Q4 performance exceeding expectations</p>
@@ -360,9 +390,11 @@ class PortfolioRiskAnalyzer {
                 <p class="fragment fade-up">Confident outlook for 2025 with strategic initiatives</p>
                 
                 <div class="fragment">
-                    <h3>Contact Information</h3>
-                    <p>Analyst: 23f3000228@ds.study.iitm.ac.in</p>
-                    <p>Investor Relations: investor.relations@financialinstitution.com</p>
+                    <div class="email-highlight">
+                        <h3>Contact Information</h3>
+                        <p><strong>Lead Analyst:</strong> 23f3000228@ds.study.iitm.ac.in</p>
+                        <p><strong>Investor Relations:</strong> investor.relations@financialinstitution.com</p>
+                    </div>
                 </div>
                 <aside class="notes">
                     Conclude with our strong performance and confidence in the future. 
